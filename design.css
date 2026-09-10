@@ -1,0 +1,233 @@
+:root {
+    color-scheme: light;
+}
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: clip;
+    display: flex;
+    flex-direction: column;
+    background-color: #7C7960;
+}
+#head {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 85px;
+    background-color: #7C7960;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: visible;
+}
+.my-custom-box {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(30px, 2vw, 35px);
+}
+.my-custom-box a {
+    text-decoration: none;
+    color: beige;
+}
+.main-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    flex: 1;
+    padding: 120px 20px 150px;
+    background-image: url('https://media.cnn.com/api/v1/images/stellar/prod/220727023655-15-philippines-earthquake-072622.jpg?c=original');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.main-content .hero-slogan {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: clamp(28px, 4vw, 42px);
+    color: beige;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    line-height: 1.1;
+}
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.dropdown {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 2;
+}
+.dropdown button {
+    background-color: #7C7960;
+    color: beige;
+    padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    border: 2px solid beige;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+.dropdown button:hover {
+    background-color: #5A5745;
+}
+.dropdown a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #7C7960;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+.dropdown a:hover {
+    background-color: #c8c8a9;
+}
+.dropdown .dropdown-content {
+    display: none;
+    position: static;
+    background-color: #f5f5dc;
+    min-width: 260px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 101;
+    padding: 10px 0;
+    margin-top: 5px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.dropdown .dropdown-content.show {
+    display: block;
+}
+.site-footer {
+    width: 100%;
+    background: #7C7960;
+    color: beige;
+    text-align: center;
+    padding: 35px 20px 25px;
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+.footer-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.footer-content h3 {
+    margin: 0 0 5px;
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 700;
+}
+.school-name {
+    margin: 0 0 10px !important;
+    font-size: clamp(15px, 1.5vw, 19px) !important;
+    font-weight: 600;
+}
+.footer-content p {
+    margin: 8px 0;
+    font-size: clamp(13px, 1.3vw, 17px);
+    line-height: 1.6;
+}
+.footer-line {
+    width: 70%;
+    max-width: 500px;
+    margin: 20px auto;
+    border: 0;
+    border-top: 1px solid rgba(245, 245, 220, 0.5);
+}
+.footer-credit {
+    font-weight: 600;
+    margin: 0 !important;
+    font-size: clamp(13px, 1.3vw, 17px) !important;
+}
+@media (max-width: 960px) {
+    .main-content {
+        padding: 100px 15px 120px;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+    #head {
+        height: auto;
+        min-height: 55px;
+        padding: 10px 15px;
+        justify-content: center;
+        text-align: center;
+    }
+    .my-custom-box {
+        font-size: clamp(17px, 4.5vw, 22px);
+        line-height: 1.2;
+    }
+    .main-content {
+        padding-top: 100px;
+        padding-bottom: 120px;
+        min-height: 100vh;
+    }
+    .main-content .hero-slogan {
+        font-size: clamp(26px, 4vw, 45px);
+        text-align: center;
+        padding: 0 10px;
+    }
+    .dropdown .dropdown-content {
+        min-width: 240px;
+        max-width: calc(100vw - 30px);
+    }
+}
+@media (max-width: 960px) and (orientation: portrait) {
+    .site-footer {
+        padding: 30px 15px 20px;
+        margin-top: 0;
+    }
+    .footer-content {
+        width: 95%;
+    }
+    .footer-line {
+        width: 80%;
+    }
+}
+@media (max-width: 960px) and (orientation: landscape) {
+    .site-footer {
+        padding: 25px 20px 18px;
+        margin-top: 0;
+    }
+    .footer-content {
+        width: 90%;
+        max-width: 900px;
+    }
+    .footer-line {
+        width: 70%;
+    }
+}
